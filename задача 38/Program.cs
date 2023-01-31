@@ -11,7 +11,7 @@ int[] InitArray(int dimension)
 
     for (int i = 0; i < dimension; i++)
     {
-        arr[i] = rnd.Next(-100, 101);
+        arr[i] = rnd.Next(0, 101);
     }
 
     return arr;
@@ -44,17 +44,7 @@ void PrintArray(int[] arr)
     return (max, min);
 }
 
-int GetDifference(int maximum, int minimum)
-{
-    int sum = 0;
-     if (maximum > 0 && minimum >0 ) sum = maximum-minimum;
-        else
-        if (maximum < 0 && minimum < 0) sum = -(maximum-minimum);
-        else sum = maximum+minimum;
-   
 
-    return sum;
-}
 
 Console.WriteLine();
 
@@ -64,5 +54,5 @@ PrintArray(array);
 (int maximum, int minimum) = GetMaxMin(array);
 Console.WriteLine($"максимальное число {maximum} > минимальное число  {minimum}");
 
-int dif = GetDifference(maximum, minimum);
-Console.WriteLine($"-> разницу между максимальным и минимальным элементов массива = {dif}");
+int dif = maximum-minimum;
+Console.WriteLine($"-> разницу между максимальным и минимальным элементjv массива = {dif}");
