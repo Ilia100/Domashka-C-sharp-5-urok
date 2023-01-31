@@ -35,7 +35,7 @@ int GetEvenNumSum(int[] array)
 
     for (int i = 0; i < array.Length; i++)
     {
-        if ((i + 1) % 2 == 0)
+        if ((i + 1) % 2 >0)
             sum += array[i];
     }
 
@@ -47,4 +47,4 @@ Console.WriteLine();
 int[] array = InitArray(5);
 PrintArray(array);
 int EvenNumSum = GetEvenNumSum(array);
-Console.WriteLine($"-> В указанном массиве {EvenNumSum} это сумма чисел на четных позициях.");
+Console.WriteLine($"-> В указанном массиве {EvenNumSum} это сумма чисел на нечетных позициях.");
